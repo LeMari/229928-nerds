@@ -22,31 +22,40 @@ h3 {
 
 /*Сетка*/
 
+body {
+	padding: 0;
+	margin: 0;
+}
 .clearfix::after {
 	content: "";
 	display: table;
 	clear: both;
 }
 .header {
+	min-height: 50px;
+	background-color: #eeeeee;
 	padding: 0 20px;
-	margin: 50px auto;
+}
+.header-top {
+	margin: 0 auto;
 	width: 1160px;
-	height: 545px;
+	padding-top: 50px;
 }
 .header-logo {
-	display: block;
 	float: left;
 	width: 360px;
 }
 .header-nav {
-	display: block;
 	float: left;
 	width: 640px;
 }
 .basket {
-	display: block;
 	float: right;
 	width: 160px;
+}
+ul.nav-list li {
+	display: inline;
+	padding-right: 50px;
 }
 .container {
 	width: 1160px;
@@ -79,7 +88,12 @@ h3 {
 	width: 360px;
 }
 .clients {
+	display: block;
 	height: 180px;
+}
+ul.clients-list li {
+	display: inline;
+	padding: 30px;
 }
 .footer {
 	width: 1160px;
@@ -94,6 +108,10 @@ h3 {
 	float: left;
 	width: 360px;
 	margin-right: 20px;
+}
+ul.social-links li {
+	display: inline;
+	padding: 10px;
 }
 .cooperation {
 	display: block;
