@@ -34,11 +34,13 @@ h3 {
 	color: #000000;
 	font-weight: bold;
 	font-family: Roboto Medium, Arial, sans-serif;
-	vertical-align: top;
+	display: block;
+	width: 107px;
+	padding-top: 25px;
 }
 .upper {
 	font-size: 23px;
-	line-height: 23px;
+	line-height: 30px;
 	color: #000000;
 	font-weight: bold;
 	font-family: Roboto Medium, Arial, sans-serif;
@@ -50,6 +52,35 @@ h3 {
 	color: #283136;
 	font-weight: normal;
 	font-family: Roboto Regular, Arial, sans-serif;
+	display: block;
+	width: 107px;
+	padding-top: 25px;
+}
+.contacts-title {
+	font-size: 16px;
+	line-height: 18px;
+	color: #283136;
+	font-weight: bold;
+	font-family: Roboto Regular, Arial, sans-serif;
+	text-transform: uppercase;
+}
+.cooperation-title {
+	font-size: 36px;
+	line-height: 36px;
+	color: #000000;
+	font-weight: bold;
+	font-family: Roboto Regular, Arial, sans-serif;
+	margin: 30px 20px 0 20px;
+	padding: 0;
+}
+.cooperation-text {
+	font-size: 16px;
+	line-height: 22px;
+	color: #444444;
+	font-weight: normal;
+	font-family: Roboto Regular, Arial, sans-serif;
+	margin: 10px 20px 30px 20px;
+	padding: 0;
 }
 
 /*Сетка*/
@@ -57,7 +88,7 @@ h3 {
 body {
 	padding: 0;
 	margin: 0;
-	background: url(../img/nerds-index.jpg) no-repeat;
+	/*	background: url(../img/nerds-index.jpg) no-repeat;*/
 }
 .clearfix::after {
 	content: "";
@@ -88,6 +119,15 @@ body {
 	width: 160px;
 	padding-top: 28px;
 }
+.basket a {
+	font-size: 16px;
+	line-height: 30px;
+	color: #000000;
+	font-weight: normal;
+	font-family: Roboto Medium, Arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
 .nav-list {
 	padding-top: 28px;
 	margin: 0;
@@ -95,6 +135,15 @@ body {
 .nav-list li {
 	display: inline;
 	padding-right: 50px;
+}
+.nav-list li a {
+	font-size: 16px;
+	line-height: 30px;
+	color: #000000;
+	font-weight: normal;
+	font-family: Roboto Medium, Arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 .header-slider {
 	position: relative;
@@ -108,14 +157,37 @@ body {
 .slide:nth-child(n+2) {
 	display: none;
 }
+.slide-text h2 {
+	width: 520px;
+}
+.slide-text p {
+	width: 410px;
+}
+.slide-btn {
+	display: inline-block;
+	vertical-align: middle;
+	width: 240px;
+	height: 52px;
+	border: none;
+	border-radius: 3px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #fb565a;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: normal;
+	font-family: Roboto Medium, Arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
 .container {
 	width: 1160px;
 	margin: 0 auto;
-	margin-bottom: 80px;
 	padding: 0 20px;
 }
 .portfolio {
-	margin-bottom: 80px;
+	border-bottom: 2px solid #eeeeee;
+	padding-bottom: 80px;
 }
 .portfolio-box {
 	float: left;
@@ -132,43 +204,74 @@ body {
 	border: none;
 }
 .about {
-	margin-top: 80px;
-	margin-bottom: 75px;
+	border-bottom: 2px solid #eeeeee;
+	padding-bottom: 60px;
 }
 .about-content {
 	float: left;
-	width: 660px;
+	width: 670px;
 	padding-top: 50px;
+}
+.about-content-title {
+	font-size: 16px;
+	line-height: 24px;
+	color: #283136;
+	font-weight: bold;
+	font-family: Roboto Regular, Arial, sans-serif;
+	text-transform: uppercase;
+}
+.about-content-list {
+	margin: 0;
+	padding: 0;
+}
+.about-content-list li {
+	list-style: none;
+	padding-left: 35px;
+	padding-bottom: 20px;
 }
 .about-info {
 	float: right;
 	width: 360px;
 	padding-top: 42px;
+	text-align: center;
 }
 .about-info-list {
 	margin: 0;
-	padding: 0;
+	padding: 10px 0;
+	text-align: left;
 }
 .about-info-list li {
 	display: inline-block;
 	width: 32%;
 }
 .clients {
-	display: block;
+	display: inline-block;
 	height: 180px;
+	border-bottom: 2px solid #eeeeee;
+	margin-bottom: 60px;
 }
 .clients-list {
+	display: table;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	vertical-align: middle;
 }
 .clients-list li {
-	display: inline-block;
-	border-right: 2px solid #eeeeee;
-	width: 280px;
+	display: table-cell;
+	/*	border-right: 2px solid #eeeeee;*/
+	width: 260px;
+	vertical-align: middle;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.clients-list li:first-child {
+	padding-left: 0;
 }
 .clients-list li:last-child {
 	border-right: none;
+	padding-right: 0;
 }
 .clients-list li img {
 	display: block;
@@ -184,18 +287,41 @@ body {
 	height: 416px;
 	background: url(../img/map.jpg);
 }
-.social {
+.contacts {
 	display: block;
+	background: #ffffff;
+	width: 320px;
+	/*	height: 310px;*/
+	margin: 54px 0;
+	margin-left: 370px;
+	padding: 55px 50px 50px 50px;
+}
+.contacts-email {
+	display: block;
+	width: 220px;
+	height: 52px;
+	border: none;
+	border-radius: 3px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #fb565a;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: normal;
+	font-family: Roboto Medium, Arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.social {
 	float: left;
-	width: 360px;
-	margin-right: 20px;
+	width: 260px;
+	margin-right: 120px;
 }
 .social-links li {
 	display: inline;
 	padding: 10px;
 }
 .cooperation {
-	display: block;
 	float: left;
 	width: 760px;
 }
