@@ -12,102 +12,22 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
 body {
+	min-width: 1160px;
 	color: #283136;
 	font-weight: normal;
 	font-family: Roboto, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 }
-h2 {
-	font-size: 55px;
-	line-height: 55px;
-	color: #000000;
-	font-weight: normal;
-	font-family: Roboto Medium, Arial, sans-serif;
-	padding-top: 30px;
-}
-h3 {
-	font-size: 24px;
-	line-height: 30px;
-	color: #000000;
-	font-weight: bold;
-	font-family: Roboto, Arial, sans-serif;
-	text-transform: uppercase;
-}
-.about-title {
-	font-size: 45px;
-	line-height: 45px;
-	color: #000000;
-	font-weight: normal;
-	font-family: Roboto Medium, Arial, sans-serif;
-	padding-top: 30px;
-}
-.info-digit {
-	font-size: 45px;
-	line-height: 45px;
-	color: #000000;
-	font-weight: bold;
-	font-family: Roboto, Arial, sans-serif;
-	display: block;
-	width: 107px;
-	padding-top: 25px;
-}
-.upper {
-	font-size: 23px;
-	line-height: 30px;
-	color: #000000;
-	font-weight: bold;
-	font-family: Roboto Medium, Arial, sans-serif;
-	vertical-align: top;
-}
-.about-info-text {
-	font-size: 16px;
-	line-height: 18px;
-	color: #283136;
-	font-weight: normal;
-	font-family: Roboto, Arial, sans-serif;
-	display: block;
-	width: 107px;
-	padding-top: 25px;
-}
-.contacts-title {
-	font-size: 16px;
-	line-height: 18px;
-	color: #283136;
-	font-weight: bold;
-	font-family: Roboto, Arial, sans-serif;
-	text-transform: uppercase;
-}
-.cooperation-title {
-	font-size: 36px;
-	line-height: 36px;
-	color: #000000;
-	font-weight: bold;
-	font-family: Roboto, Arial, sans-serif;
-	margin: 30px 20px 0 20px;
-	padding: 0;
-}
-.cooperation-text {
-	font-size: 16px;
-	line-height: 22px;
-	color: #444444;
-	font-weight: normal;
-	font-family: Roboto, Arial, sans-serif;
-	margin: 10px 20px 30px 20px;
-	padding: 0;
-}
-
-/*Сетка*/
-
-.clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
-}
 .header {
 	min-height: 50px;
-	background-color: #eeeeee;
+	background-color: #eee;
 	padding: 0 20px;
 }
 .header-top {
@@ -124,6 +44,25 @@ h3 {
 	float: left;
 	width: 640px;
 }
+.nav-list {
+	padding: 0;
+	padding-top: 25px;
+	margin: 0;
+}
+.nav-list li {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 44px;
+}
+.nav-list a {
+	font-size: 16px;
+	line-height: 30px;
+	color: #000;
+	font-weight: normal;
+	font-family: Roboto Medium, Arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
 .basket {
 	float: right;
 	width: 160px;
@@ -132,32 +71,14 @@ h3 {
 .basket a {
 	font-size: 16px;
 	line-height: 30px;
-	color: #000000;
+	color: #000;
 	font-weight: normal;
 	font-family: Roboto Medium, Arial, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 }
 .basket a:hover {
-	color: #444444;
-}
-.nav-list {
-	padding: 0;
-	padding-top: 25px;
-	margin: 0;
-}
-.nav-list li {
-	display: inline-block;
-	margin-right: 44px;
-}
-.nav-list a {
-	font-size: 16px;
-	line-height: 30px;
-	color: #000000;
-	font-weight: normal;
-	font-family: Roboto Medium, Arial, sans-serif;
-	text-transform: uppercase;
-	text-decoration: none;
+	color: #444;
 }
 .header-slider {
 	position: relative;
@@ -177,6 +98,14 @@ h3 {
 .slide-text p {
 	width: 410px;
 }
+h2 {
+	font-size: 55px;
+	line-height: 55px;
+	color: #000;
+	font-weight: normal;
+	font-family: Roboto Medium, Arial, sans-serif;
+	padding-top: 30px;
+}
 .slide-btn {
 	display: inline-block;
 	vertical-align: middle;
@@ -185,7 +114,7 @@ h3 {
 	border: none;
 	border-radius: 3px;
 	text-align: center;
-	color: #ffffff;
+	color: #fff;
 	background-color: #fb565a;
 	font-size: 16px;
 	line-height: 18px;
@@ -213,6 +142,14 @@ h3 {
 	float: right;
 	margin-right: 60px;
 }
+h3 {
+	font-size: 24px;
+	line-height: 30px;
+	color: #000;
+	font-weight: bold;
+	font-family: Roboto, Arial, sans-serif;
+	text-transform: uppercase;
+}
 .porfolio-btn {
 	height: 52px;
 	border: none;
@@ -225,6 +162,14 @@ h3 {
 	float: left;
 	width: 670px;
 	padding-top: 50px;
+}
+.about-title {
+	font-size: 45px;
+	line-height: 45px;
+	color: #000;
+	font-weight: normal;
+	font-family: Roboto Medium, Arial, sans-serif;
+	padding-top: 30px;
 }
 .about-content-title {
 	font-size: 16px;
@@ -256,10 +201,39 @@ h3 {
 }
 .about-info-list li {
 	display: inline-block;
+	vertical-align: top;
 	width: 32%;
 }
+.info-digit {
+	font-size: 45px;
+	line-height: 45px;
+	color: #000;
+	font-weight: bold;
+	font-family: Roboto, Arial, sans-serif;
+	display: block;
+	width: 107px;
+	padding-top: 25px;
+}
+.upper {
+	font-size: 23px;
+	line-height: 30px;
+	color: #000;
+	font-weight: bold;
+	font-family: Roboto Medium, Arial, sans-serif;
+	vertical-align: top;
+}
+.about-info-text {
+	font-size: 16px;
+	line-height: 18px;
+	color: #283136;
+	font-weight: normal;
+	font-family: Roboto, Arial, sans-serif;
+	display: block;
+	width: 107px;
+	padding-top: 25px;
+}
 .clients {
-	border-bottom: 2px solid #eeeeee;
+	border-bottom: 2px solid #eee;
 	margin-bottom: 60px;
 }
 .clients-list {
@@ -272,11 +246,9 @@ h3 {
 }
 .clients-list li {
 	display: inline-block;
-	margin-bottom: 45px;
-	width: 260px;
 	vertical-align: middle;
-	margin-right: 20px;
-	margin-left: 20px;
+	width: 260px;
+	margin: 0 20px 45px;
 }
 .clients-list li:nth-child(4n+1) {
 	margin-left: 0;
@@ -294,20 +266,18 @@ h3 {
 	padding: 0;
 }
 .map {
-	width: 100%;
 	height: 416px;
-	background: url(../img/map.jpg);
+	background: #eee url(../img/map.jpg) no-repeat center center;
 }
 .contacts {
 	position: relative;
 	top: 35px;
 	display: block;
-	background: #ffffff;
+	background: #fff;
 	width: 320px;
 	/*	height: 310px;*/
-	margin: 54px 0;
-	margin-left: 370px;
-	padding: 55px 50px 50px 50px;
+	margin: 54px 0 0 370px;
+	padding: 55px 50px 50px;
 }
 .contacts-email {
 	display: block;
@@ -316,7 +286,7 @@ h3 {
 	border: none;
 	border-radius: 3px;
 	text-align: center;
-	color: #ffffff;
+	color: #fff;
 	background-color: #fb565a;
 	font-size: 16px;
 	line-height: 18px;
@@ -324,6 +294,19 @@ h3 {
 	font-family: Roboto Medium, Arial, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
+}
+.contacts-title {
+	font-size: 16px;
+	line-height: 18px;
+	color: #283136;
+	font-weight: bold;
+	font-family: Roboto, Arial, sans-serif;
+	text-transform: uppercase;
+}
+.footer-bottom {
+	width: 1160px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 .social {
 	float: left;
@@ -338,12 +321,16 @@ h3 {
 }
 .social-links-item {
 	display: inline-block;
+	vertical-align: middle;
 	margin-right: 7px;
 	position: relative;
 	width: 80px;
 	height: 80px;
 	background-color: #e1e1e1;
 	border-radius: 40px;
+}
+.social-links-item:hover {
+	background-color: #e74246;
 }
 .social-icon {
 	top: 50%;
@@ -365,9 +352,27 @@ h3 {
 	background-position: -111px 2px;
 }
 .social-icon:hover {
-	filter: invert(100%);
+	filter: invert(50%);
 }
 .cooperation {
 	float: left;
 	width: 760px;
+}
+.cooperation-title {
+	font-size: 36px;
+	line-height: 36px;
+	color: #000;
+	font-weight: bold;
+	font-family: Roboto, Arial, sans-serif;
+	margin: 30px 20px 0;
+	padding: 0;
+}
+.cooperation-text {
+	font-size: 16px;
+	line-height: 22px;
+	color: #444;
+	font-weight: normal;
+	font-family: Roboto, Arial, sans-serif;
+	margin: 10px 20px 30px;
+	padding: 0;
 }
