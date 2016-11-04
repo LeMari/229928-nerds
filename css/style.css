@@ -1,9 +1,23 @@
+@font-face {
+	font-family: 'Roboto';
+	url('../fonts/roboto.woff') format('woff'),
+	url('../fonts/roboto.woff2') format('woff2'),
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto Medium';
+	url('../fonts/robotomedium.woff') format('woff'),
+	url('../fonts/robotomedium.woff2') format('woff2'),
+	font-weight: normal;
+	font-style: normal;
+}
 body {
-	font-size: 16px;
-	line-height: 24px;
 	color: #283136;
 	font-weight: normal;
-	font-family: Roboto Regular, Arial, sans-serif;
+	font-family: Roboto, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 h2 {
 	font-size: 55px;
@@ -19,6 +33,7 @@ h3 {
 	color: #000000;
 	font-weight: bold;
 	font-family: Roboto, Arial, sans-serif;
+	text-transform: uppercase;
 }
 .about-title {
 	font-size: 45px;
@@ -33,7 +48,7 @@ h3 {
 	line-height: 45px;
 	color: #000000;
 	font-weight: bold;
-	font-family: Roboto Medium, Arial, sans-serif;
+	font-family: Roboto, Arial, sans-serif;
 	display: block;
 	width: 107px;
 	padding-top: 25px;
@@ -51,7 +66,7 @@ h3 {
 	line-height: 18px;
 	color: #283136;
 	font-weight: normal;
-	font-family: Roboto Regular, Arial, sans-serif;
+	font-family: Roboto, Arial, sans-serif;
 	display: block;
 	width: 107px;
 	padding-top: 25px;
@@ -61,7 +76,7 @@ h3 {
 	line-height: 18px;
 	color: #283136;
 	font-weight: bold;
-	font-family: Roboto Regular, Arial, sans-serif;
+	font-family: Roboto, Arial, sans-serif;
 	text-transform: uppercase;
 }
 .cooperation-title {
@@ -69,7 +84,7 @@ h3 {
 	line-height: 36px;
 	color: #000000;
 	font-weight: bold;
-	font-family: Roboto Regular, Arial, sans-serif;
+	font-family: Roboto, Arial, sans-serif;
 	margin: 30px 20px 0 20px;
 	padding: 0;
 }
@@ -78,18 +93,13 @@ h3 {
 	line-height: 22px;
 	color: #444444;
 	font-weight: normal;
-	font-family: Roboto Regular, Arial, sans-serif;
+	font-family: Roboto, Arial, sans-serif;
 	margin: 10px 20px 30px 20px;
 	padding: 0;
 }
 
 /*Сетка*/
 
-body {
-	padding: 0;
-	margin: 0;
-	/*	background: url(../img/nerds-index.jpg) no-repeat;*/
-}
 .clearfix::after {
 	content: "";
 	display: table;
@@ -117,7 +127,7 @@ body {
 .basket {
 	float: right;
 	width: 160px;
-	padding-top: 28px;
+	padding-top: 25px;
 }
 .basket a {
 	font-size: 16px;
@@ -128,15 +138,19 @@ body {
 	text-transform: uppercase;
 	text-decoration: none;
 }
+.basket a:hover {
+	color: #444444;
+}
 .nav-list {
-	padding-top: 28px;
+	padding: 0;
+	padding-top: 25px;
 	margin: 0;
 }
 .nav-list li {
-	display: inline;
-	padding-right: 50px;
+	display: inline-block;
+	margin-right: 44px;
 }
-.nav-list li a {
+.nav-list a {
 	font-size: 16px;
 	line-height: 30px;
 	color: #000000;
@@ -217,7 +231,7 @@ body {
 	line-height: 24px;
 	color: #283136;
 	font-weight: bold;
-	font-family: Roboto Regular, Arial, sans-serif;
+	font-family: Roboto, Arial, sans-serif;
 	text-transform: uppercase;
 }
 .about-content-list {
@@ -245,35 +259,32 @@ body {
 	width: 32%;
 }
 .clients {
-	display: inline-block;
-	height: 180px;
 	border-bottom: 2px solid #eeeeee;
 	margin-bottom: 60px;
 }
 .clients-list {
-	display: table;
-	height: 100%;
 	margin: 0;
+	margin-top: 45px;
 	padding: 0;
 	list-style: none;
-	vertical-align: middle;
+	vertical-align: bottom;
+	font-size: 0;
 }
 .clients-list li {
-	display: table-cell;
-	/*	border-right: 2px solid #eeeeee;*/
+	display: inline-block;
+	margin-bottom: 45px;
 	width: 260px;
 	vertical-align: middle;
-	padding-left: 20px;
-	padding-right: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
 }
-.clients-list li:first-child {
-	padding-left: 0;
+.clients-list li:nth-child(4n+1) {
+	margin-left: 0;
 }
-.clients-list li:last-child {
-	border-right: none;
-	padding-right: 0;
+.clients-list li:nth-child(4n) {
+	margin-right: 0;
 }
-.clients-list li img {
+.clients-list img {
 	display: block;
 	margin: 0 auto;
 }
@@ -288,6 +299,8 @@ body {
 	background: url(../img/map.jpg);
 }
 .contacts {
+	position: relative;
+	top: 35px;
 	display: block;
 	background: #ffffff;
 	width: 320px;
@@ -314,12 +327,45 @@ body {
 }
 .social {
 	float: left;
-	width: 260px;
-	margin-right: 120px;
+	width: 280px;
+	margin-right: 100px;
+	margin-top: 20px;
 }
-.social-links li {
-	display: inline;
-	padding: 10px;
+.social-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.social-links-item {
+	display: inline-block;
+	margin-right: 7px;
+	position: relative;
+	width: 80px;
+	height: 80px;
+	background-color: #e1e1e1;
+	border-radius: 40px;
+}
+.social-icon {
+	top: 50%;
+	left: 50%;
+	margin-left: -13px;
+	margin-top: -13px;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	background: url(../img/sprite-icons.png) no-repeat;
+}
+.vk {
+	background-position: 0px 6px;
+}
+.fb {
+	background-position: -55px 1px;
+}
+.inst {
+	background-position: -111px 2px;
+}
+.social-icon:hover {
+	filter: invert(100%);
 }
 .cooperation {
 	float: left;
