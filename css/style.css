@@ -96,6 +96,17 @@ body {
 	background: url("../img/sprite-icons.png") no-repeat;
 	background-position: -161px 0;
 }
+h1 {
+	display: block;
+	text-align: center;
+	margin: 0;
+	padding: 76px 0 110px;
+	font-size: 55px;
+	line-height: 55px;
+	color: #000;
+	font-weight: normal;
+	font-family: Roboto Medium, Arial, sans-serif;
+}
 .header-slider {
 	position: relative;
 	height: 430px;
@@ -130,7 +141,8 @@ h2 {
 	margin-top: 25px;
 	line-height: 24px;
 }
-.slide-btn {
+.slide-btn,
+.btn-form {
 	display: inline-block;
 	vertical-align: middle;
 	width: 240px;
@@ -379,7 +391,7 @@ h3 {
 }
 .footer-bottom {
 	width: 1160px;
-	margin: 50px auto 0;
+	margin: 50px auto;
 	padding: 0 20px;
 }
 .social {
@@ -448,4 +460,55 @@ h3 {
 	color: #444;
 	margin: 10px 20px 30px;
 	padding: 0;
+}
+
+/*Каталог*/
+
+.form-box {
+	float: left;
+	width: 260px;
+	margin-right: 140px;
+}
+.catalog-title {
+	display: block;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000;
+	margin-top: 50px;
+}
+.catalog-label {
+	display: block;
+	margin: 15px 0;
+}
+.btn-form {
+	background-color: #eee;
+}
+.btn-form:hover {
+	background-color: #dfdfdf;
+}
+.btn-form:active {
+	background-color: #d5d5d5;
+	color: #a9a9a9;
+}
+.main-catalog {
+	float: right;
+	width: 760px;
+}
+.catalog-list {
+	font-size: 0;
+}
+.catalog-settings {
+	display: block;
+}
+.catalog-template {
+	display: inline-block;
+	vertical-align: top;
+	width: 360px;
+	margin-right: 40px;
+	font-size: 16px;
+}
+.catalog-template:nth-child(2n) {
+	margin-right: 0;
 }
