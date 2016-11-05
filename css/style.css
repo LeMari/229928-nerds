@@ -20,6 +20,7 @@
 body {
 	min-width: 1160px;
 	color: #283136;
+	font-size: 16px;
 	font-weight: normal;
 	font-family: Roboto, Arial, sans-serif;
 	margin: 0;
@@ -55,10 +56,8 @@ body {
 	margin-right: 44px;
 }
 .nav-list a {
-	font-size: 16px;
 	line-height: 30px;
 	color: #000;
-	font-weight: normal;
 	font-family: Roboto Medium, Arial, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -66,19 +65,36 @@ body {
 .basket {
 	float: right;
 	width: 160px;
+	text-align: right;
+	margin: 0;
+	padding: 0;
 	padding-top: 25px;
 }
 .basket a {
-	font-size: 16px;
+	display: inline-block;
+	vertical-align: baseline;
 	line-height: 30px;
 	color: #000;
-	font-weight: normal;
 	font-family: Roboto Medium, Arial, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
+	position: relative;
 }
 .basket a:hover {
-	color: #444;
+	color: #fb565a;
+}
+.basket a:active {
+	color: #bdbdbd;
+}
+.basket a::before {
+	content: "";
+	position: absolute;
+	top: 6px;
+	left: -41px;
+	width: 16px;
+	height: 16px;
+	background: url("../img/sprite-icons.png") no-repeat;
+	background-position: -161px 0;
 }
 .header-slider {
 	position: relative;
@@ -104,24 +120,31 @@ h2 {
 	color: #000;
 	font-weight: normal;
 	font-family: Roboto Medium, Arial, sans-serif;
-	padding-top: 30px;
+	margin: 0;
+	padding: 0;
+	margin-top: 78px;
+}
+.slide-text p {
+	margin: 0;
+	padding: 0;
+	margin-top: 25px;
+	line-height: 24px;
 }
 .slide-btn {
 	display: inline-block;
 	vertical-align: middle;
 	width: 240px;
-	height: 52px;
 	border: none;
 	border-radius: 3px;
 	text-align: center;
 	color: #fff;
 	background-color: #fb565a;
-	font-size: 16px;
 	line-height: 18px;
-	font-weight: normal;
 	font-family: Roboto Medium, Arial, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
+	padding: 16px 0px;
+	margin-top: 40px;
 }
 .container {
 	width: 1160px;
@@ -147,16 +170,60 @@ h3 {
 	line-height: 30px;
 	color: #000;
 	font-weight: bold;
-	font-family: Roboto, Arial, sans-serif;
 	text-transform: uppercase;
+	margin: 0;
+	margin-top: 20px;
+}
+.portfolio-text {
+	line-height: 24px;
+	width: 260px;
+	margin-bottom: 32px;
 }
 .porfolio-btn {
+	border: none;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	width: 160px;
 	height: 52px;
 	border: none;
+	font-family: Roboto Medium, Arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.porfolio-btn:active span {
+	opacity: 0.3;
+}
+.order-red {
+	background-color: #fb565a;
+}
+.order-red:hover {
+	background-color: #e74246;
+}
+.order-red:active {
+	background-color: #d7373b;
+}
+.order-green {
+	background-color: #00ca74;
+}
+.order-green:hover {
+	background-color: #00bc6c;
+}
+.order-green:active {
+	background-color: #00aa62;
+}
+.order-yellow {
+	background-color: #efc84a;
+}
+.order-yellow:hover {
+	background-color: #eab534;
+}
+.order-yellow:active {
+	background-color: #e5a722;
 }
 .about {
 	border-bottom: 2px solid #eeeeee;
-	padding-bottom: 60px;
+	padding-bottom: 55px;
 }
 .about-content {
 	float: left;
@@ -167,17 +234,21 @@ h3 {
 	font-size: 45px;
 	line-height: 45px;
 	color: #000;
-	font-weight: normal;
 	font-family: Roboto Medium, Arial, sans-serif;
-	padding-top: 30px;
+	margin-top: 25px;
+}
+.about-content-text {
+	padding: 0;
+	margin: 0;
+	margin-top: 31px;
+	margin-bottom: 40px;
+	line-height: 24px;
 }
 .about-content-title {
-	font-size: 16px;
 	line-height: 24px;
-	color: #283136;
 	font-weight: bold;
-	font-family: Roboto, Arial, sans-serif;
 	text-transform: uppercase;
+	margin-top: 30px;
 }
 .about-content-list {
 	margin: 0;
@@ -185,8 +256,7 @@ h3 {
 }
 .about-content-list li {
 	list-style: none;
-	padding-left: 35px;
-	padding-bottom: 20px;
+	padding: 10px 0 20px 35px;
 }
 .about-info {
 	float: right;
@@ -196,7 +266,7 @@ h3 {
 }
 .about-info-list {
 	margin: 0;
-	padding: 10px 0;
+	padding: 0;
 	text-align: left;
 }
 .about-info-list li {
@@ -209,7 +279,6 @@ h3 {
 	line-height: 45px;
 	color: #000;
 	font-weight: bold;
-	font-family: Roboto, Arial, sans-serif;
 	display: block;
 	width: 107px;
 	padding-top: 25px;
@@ -223,25 +292,21 @@ h3 {
 	vertical-align: top;
 }
 .about-info-text {
-	font-size: 16px;
 	line-height: 18px;
-	color: #283136;
 	font-weight: normal;
-	font-family: Roboto, Arial, sans-serif;
 	display: block;
 	width: 107px;
-	padding-top: 25px;
+	margin-top: 18px;
 }
 .clients {
 	border-bottom: 2px solid #eee;
-	margin-bottom: 60px;
+	margin-bottom: 80px;
 }
 .clients-list {
 	margin: 0;
-	margin-top: 45px;
+	margin-top: 50px;
 	padding: 0;
 	list-style: none;
-	vertical-align: bottom;
 	font-size: 0;
 }
 .clients-list li {
@@ -271,41 +336,50 @@ h3 {
 }
 .contacts {
 	position: relative;
-	top: 35px;
+	top: 52px;
+	left: 180px;
 	display: block;
 	background: #fff;
-	width: 320px;
-	/*	height: 310px;*/
-	margin: 54px 0 0 370px;
-	padding: 55px 50px 50px;
+	width: 220px;
+	height: 205px;
+	padding: 50px;
 }
 .contacts-email {
-	display: block;
+	display: inline-block;
+	vertical-align: middle;
 	width: 220px;
-	height: 52px;
 	border: none;
 	border-radius: 3px;
 	text-align: center;
 	color: #fff;
 	background-color: #fb565a;
-	font-size: 16px;
 	line-height: 18px;
-	font-weight: normal;
 	font-family: Roboto Medium, Arial, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
+	padding: 16px 0px;
+	margin-top: 36px;
 }
 .contacts-title {
-	font-size: 16px;
-	line-height: 18px;
-	color: #283136;
+	font-size: 18px;
+	line-height: 30px;
 	font-weight: bold;
-	font-family: Roboto, Arial, sans-serif;
 	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+}
+.contacts-text {
+	margin: 0;
+	padding: 0;
+	margin-top: 23px;
+	color: #666;
+}
+.phone {
+	text-decoration: none;
 }
 .footer-bottom {
 	width: 1160px;
-	margin: 0 auto;
+	margin: 50px auto 0;
 	padding: 0 20px;
 }
 .social {
@@ -332,6 +406,9 @@ h3 {
 .social-links-item:hover {
 	background-color: #e74246;
 }
+.social-links-item:active {
+	background-color: #d7373b;
+}
 .social-icon {
 	top: 50%;
 	left: 50%;
@@ -351,8 +428,8 @@ h3 {
 .inst {
 	background-position: -111px 2px;
 }
-.social-icon:hover {
-	filter: invert(50%);
+.social-icon:active {
+	opacity: 0.3;
 }
 .cooperation {
 	float: left;
@@ -363,16 +440,12 @@ h3 {
 	line-height: 36px;
 	color: #000;
 	font-weight: bold;
-	font-family: Roboto, Arial, sans-serif;
-	margin: 30px 20px 0;
+	margin: 25px 20px 0;
 	padding: 0;
 }
 .cooperation-text {
-	font-size: 16px;
 	line-height: 22px;
 	color: #444;
-	font-weight: normal;
-	font-family: Roboto, Arial, sans-serif;
 	margin: 10px 20px 30px;
 	padding: 0;
 }
