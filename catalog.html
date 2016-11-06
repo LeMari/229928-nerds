@@ -19,7 +19,7 @@
 				<ul class="nav-list">
 					<li><a href="#">Студия</a></li>
 					<li><a href="#">Клиенты</a></li>
-					<li><a href="#">Магазин</a></li>
+					<li><a class="active" href="#">Магазин</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
 			</nav>
@@ -38,10 +38,16 @@
 						<span class="control-ball-left"></span>
 						<span class="control-ball-right"></span>
 					</div>
-					<label for="from" class="range-from">от</label>
-					<input type="number" id="from" name="from" min="0" value="0">
-					<label for="till" class="range-to">до</label>
-					<input type="number" id="till" name="till" max="25000" value="15000">
+					<div class="ranges clearfix">
+						<div class="range-left">
+							<label for="from" class="range-from">от</label>
+							<input class="from" type="number" id="from" name="from" min="0" value="0">
+						</div>
+						<div class="range-right">
+							<label for="till" class="range-to">до</label>
+							<input class="till" type="number" id="till" name="till" max="25000" value="15000">
+						</div>
+					</div>
 				</div>
 				<span class="catalog-title">Сетка:</span>
 				<label class="catalog-label">
@@ -65,24 +71,29 @@
 			</form>
 		</div>
 		<div class="main-catalog">
-			<div class="catalog-settings">
-				<span class="catalog-title">Сортировать:</span>
-				<div class="catalog-filters-list">
+			<div class="catalog-settings clearfix">
+				<span class="catalog-title">Сортировать:</span
+				><div class="catalog-filters-list">
 					<a class="catalog-filters active" href="#">по цене</a>
 					<a class="catalog-filters" href="#">по типу</a>
 					<a class="catalog-filters" href="#">по названию</a>
-					<a class="catalog-sort-desc active" href="#"><img src="img/#" alt="По убыванию"></a>
-					<a class="catalog-sort-asc" href="#"><img src="img/#" alt="По возрастанию"></a>
+					<a class="catalog-sort-desc active" href="#"><!--<img src="img/#" alt="По убыванию">--></a>
+					<a class="catalog-sort-asc" href="#"><!--<img src="img/#" alt="По возрастанию">--></a>
 				</div>
 			</div>
 			<div class="catalog-list">
-				<div class="catalog-template">
+				<div class="catalog-template hover">
 					<div class="catalog-browser-img">
+						<div class="browser-dots hover">
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+						</div>
 						<img src="img/img-sedona.jpg" class="catalog-template-img" height="576" width="360" alt="SEDONA">
 					</div>
-					<div class="calalog-template-info">
+					<div class="calalog-template-info hover">
 						<a class="catalog-template-title">SEDONA</a>
-						<p class="catalog-template-text">Информационный сайт для туристов</p>
+						<p class="catalog-template-text">Информационный сайт для&nbsp;туристов</p>
 						<form action="#" method="get">
 							<button class="catalog-template-btn" value="#">9 900 руб.</button>
 						</form>
@@ -90,6 +101,11 @@
 				</div>
 				<div class="catalog-template">
 					<div class="catalog-browser-img">
+						<div class="browser-dots">
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+						</div>
 						<img src="img/img-pink.jpg" class="catalog-template-img" height="576" width="360" alt="PINK APP">
 					</div>
 					<div class="calalog-template-info">
@@ -102,6 +118,11 @@
 				</div>
 				<div class="catalog-template">
 					<div class="catalog-browser-img">
+						<div class="browser-dots">
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+						</div>
 						<img src="img/img-barbershop.jpg" class="catalog-template-img" height="576" width="360" alt="BARBERSHOP">
 					</div>
 					<div class="calalog-template-info">
@@ -114,6 +135,11 @@
 				</div>
 				<div class="catalog-template">
 					<div class="catalog-browser-img">
+						<div class="browser-dots">
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+						</div>
 						<img src="img/img-mishka.jpg" class="catalog-template-img" height="576" width="360" alt="MISHKA">
 					</div>
 					<div class="calalog-template-info">
@@ -126,6 +152,11 @@
 				</div>
 				<div class="catalog-template">
 					<div class="catalog-browser-img">
+						<div class="browser-dots">
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+						</div>
 						<img src="img/img-aplus.jpg" class="catalog-template-img" height="576" width="360" alt="A PLUS">
 					</div>
 					<div class="calalog-template-info">
@@ -138,6 +169,11 @@
 				</div>
 				<div class="catalog-template">
 					<div class="catalog-browser-img">
+						<div class="browser-dots">
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+							<div class="browser-dot"></div>
+						</div>
 						<img src="img/img-kvast.jpg" class="catalog-template-img" height="576" width="360" alt="КВАСТ">
 					</div>
 					<div class="calalog-template-info">
