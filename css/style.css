@@ -139,8 +139,8 @@ h2 {
 	font-size: 55px;
 	line-height: 55px;
 	color: #000;
-	font-weight: normal;
-	font-family: Roboto Medium, Arial, sans-serif;
+	font-weight: bold;
+	font-family: Roboto, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 	margin-top: 78px;
@@ -167,6 +167,7 @@ h2 {
 	text-decoration: none;
 	padding: 16px 0px;
 	margin-top: 40px;
+	cursor: pointer;
 }
 .container {
 	width: 1160px;
@@ -207,11 +208,12 @@ h3 {
 	text-align: center;
 	color: #fff;
 	width: 160px;
-	height: 52px;
+	padding: 16px 5px;
 	border: none;
 	font-family: Roboto Medium, Arial, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
+	cursor: pointer;
 }
 .porfolio-btn:active span {
 	opacity: 0.3;
@@ -635,7 +637,7 @@ h3 {
 	background: #eee;
 }
 .calalog-template-info.hover {
-	/*	display: block;*/
+	display: block;
 }
 .catalog-template-title {
 	display: inline-block;
