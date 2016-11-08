@@ -1,12 +1,12 @@
 @font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/roboto.woff') format('woff'), url('../fonts/roboto.woff2') format('woff2');
+	font-family: "Roboto";
+	src: url("../fonts/roboto.woff") format("woff"), url("../fonts/roboto.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Roboto Medium';
-	src: url('../fonts/robotomedium.woff') format('woff'), url('../fonts/robotomedium.woff2') format('woff2');
+	font-family: "Roboto Medium";
+	src: url("../fonts/robotomedium.woff") format("woff"), url("../fonts/robotomedium.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -56,7 +56,7 @@ body {
 .nav-list a {
 	line-height: 30px;
 	color: #000;
-	font-family: Roboto Medium, Arial, sans-serif;
+	font-family: "Roboto Medium", "Arial", sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding-bottom: 8px;
@@ -83,7 +83,7 @@ body {
 	vertical-align: baseline;
 	line-height: 30px;
 	color: #000;
-	font-family: Roboto Medium, Arial, sans-serif;
+	font-family: "Roboto Medium", "Arial", sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	position: relative;
@@ -113,7 +113,7 @@ h1 {
 	line-height: 55px;
 	color: #000;
 	font-weight: normal;
-	font-family: Roboto Medium, Arial, sans-serif;
+	font-family: "Roboto Medium", "Arial", sans-serif;
 }
 .header-slider {
 	position: relative;
@@ -138,7 +138,7 @@ h2 {
 	line-height: 55px;
 	color: #000;
 	font-weight: bold;
-	font-family: Roboto, Arial, sans-serif;
+	font-family: "Roboto", "Arial", sans-serif;
 	margin: 0;
 	padding: 0;
 	margin-top: 78px;
@@ -160,7 +160,7 @@ h2 {
 	color: #fff;
 	background-color: #fb565a;
 	line-height: 18px;
-	font-family: Roboto Medium, Arial, sans-serif;
+	font-family: "Roboto Medium", "Arial", sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 16px 0px;
@@ -208,7 +208,7 @@ h3 {
 	width: 160px;
 	padding: 16px 5px;
 	border: none;
-	font-family: Roboto Medium, Arial, sans-serif;
+	font-family: "Roboto Medium", "Arial", sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	cursor: pointer;
@@ -256,7 +256,7 @@ h3 {
 	font-size: 45px;
 	line-height: 45px;
 	color: #000;
-	font-family: Roboto Medium, Arial, sans-serif;
+	font-family: "Roboto Medium", "Arial", sans-serif;
 	margin-top: 25px;
 }
 .about-content-text {
@@ -310,7 +310,7 @@ h3 {
 	line-height: 30px;
 	color: #000;
 	font-weight: bold;
-	font-family: Roboto Medium, Arial, sans-serif;
+	font-family: "Roboto Medium", "Arial", sans-serif;
 	vertical-align: top;
 }
 .about-info-text {
@@ -378,7 +378,7 @@ h3 {
 	color: #fff;
 	background-color: #fb565a;
 	line-height: 18px;
-	font-family: Roboto Medium, Arial, sans-serif;
+	font-family: "Roboto Medium", "Arial", sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 16px 0px;
@@ -678,7 +678,7 @@ h3 {
 	color: #000;
 	background-color: #eee;
 	line-height: 18px;
-	font-family: Roboto Medium, Arial, sans-serif;
+	font-family: "Roboto Medium", "Arial", sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
 	margin-right: 7px;
