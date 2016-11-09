@@ -499,6 +499,11 @@ h3 {
 .social-links-item:active {
 	background-color: #d7373b;
 }
+.social-links-item a {
+	width: inherit;
+	height: inherit;
+	display: inherit;
+}
 .social-icon {
 	top: 50%;
 	left: 50%;
@@ -508,6 +513,7 @@ h3 {
 	width: 26px;
 	height: 26px;
 	background: url(../img/sprite-icons.png) no-repeat;
+	display: block;
 }
 .vk {
 	background-position: 0px 6px;
