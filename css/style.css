@@ -15,6 +15,9 @@
 	display: table;
 	clear: both;
 }
+a {
+	outline: none;
+}
 body {
 	min-width: 1160px;
 	color: #283136;
@@ -545,31 +548,29 @@ h3 {
 	width: 80px;
 	height: 80px;
 	background-color: #e1e1e1;
-	border-radius: 40px;
+	border-radius: 50%;
 	transition: 0.3s all linear;
 }
-.social-links-item:active {
-	opacity: 0.3;
-}
-.vk {
-	background-position: 0px 6px;
-}
-.fb {
-	background-position: -55px 1px;
-}
-.inst {
-	background-position: -111px 2px;
-}
-.social-links-item::after {
+.social-links-item::after,
+.fb::after,
+.vk::after,
+.inst::after {
 	content: "";
-	top: 50%;
-	left: 50%;
-	margin-left: -13px;
-	margin-top: -13px;
+	top: 27px;
+	left: 27px;
 	position: absolute;
 	width: 26px;
 	height: 26px;
 	background: url(../img/sprite-icons.png) no-repeat;
+}
+.vk::after {
+	background-position: 0px 6px;
+}
+.fb::after {
+	background-position: -55px 1px;
+}
+.inst::after {
+	background-position: -111px 2px;
 }
 .social-links-item:hover {
 	background-color: #e74246;
@@ -577,41 +578,8 @@ h3 {
 .social-links-item:active {
 	background-color: #d7373b;
 }
-
-/*
-.social-links-item a {
-	width: inherit;
-	height: inherit;
-	display: inherit;
-}
-*/
-
-
-/*
-.social-icon {
-	top: 50%;
-	left: 50%;
-	margin-left: -13px;
-	margin-top: -13px;
-	position: absolute;
-	width: 26px;
-	height: 26px;
-	background: url(../img/sprite-icons.png) no-repeat;
-	display: block;
-}
-*/
-
-.social-links-item:active {
+.social-links-item:active::after {
 	opacity: 0.3;
-}
-.vk {
-	background-position: 0px 6px;
-}
-.fb {
-	background-position: -55px 1px;
-}
-.inst {
-	background-position: -111px 2px;
 }
 .cooperation {
 	float: left;
