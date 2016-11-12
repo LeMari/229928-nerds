@@ -362,8 +362,18 @@ h3 {
 	padding: 0;
 }
 .about-content-list li {
+	position: relative;
 	list-style: none;
 	padding: 10px 0 20px 35px;
+}
+.about-content-list li::before {
+	content: "";
+	top: 18px;
+	position: absolute;
+	width: 25px;
+	height: 2px;
+	background: #fb565a;
+	margin-left: -34px;
 }
 .about-info {
 	float: right;
@@ -681,6 +691,7 @@ a .social-icon:active {
 .catalog-label {
 	display: block;
 	margin: 15px 0;
+	cursor: pointer;
 }
 .btn-form {
 	color: #000;
@@ -711,8 +722,16 @@ a .social-icon:active {
 .catalog-template:nth-child(2n) {
 	margin-right: 0;
 }
-.catalog-template.hover {
-	box-shadow: 0 7px 20px #ccc;
+.catalog-template:hover {
+	box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
+	border-radius: 5px;
+}
+.catalog-template:hover .calalog-template-info {
+	display: block;
+}
+.catalog-template:hover .browser-dots {
+	background-color: #4d4d4d;
+	border-color: #4d4d4d;
 }
 .browser-dots {
 	display: block;
@@ -722,10 +741,6 @@ a .social-icon:active {
 	border-bottom: none;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
-}
-.browser-dots.hover {
-	background-color: #4d4d4d;
-	border-color: #4d4d4d;
 }
 .browser-dot {
 	width: 14px;
@@ -746,9 +761,6 @@ a .social-icon:active {
 	right: 0;
 	background: #eee;
 }
-.calalog-template-info.hover {
-	display: block;
-}
 .catalog-template-title {
 	display: inline-block;
 	vertical-align: top;
@@ -768,6 +780,7 @@ a .social-icon:active {
 	width: 200px;
 	margin-top: 15px;
 	margin-bottom: 30px;
+	cursor: pointer;
 }
 .catalog-template-btn:hover {
 	background-color: #e74246;
