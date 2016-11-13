@@ -646,10 +646,14 @@ h3 {
 }
 .from,
 .till {
-	width: 80px;
+	width: 60px;
 	height: 28px;
+	padding: 0 10px;
 	text-align: center;
 	background-color: #eee;
+	border-radius: 3px;
+	outline: none;
+	border: none;
 }
 .catalog-filters {
 	font-size: 14px;
@@ -690,7 +694,7 @@ h3 {
 }
 .grid-types,
 .speciality-list {
-	width: 360px;
+	/*	width: 360px;*/
 	margin-top: 45px;
 }
 .grid-types .catalog-title,
@@ -733,7 +737,8 @@ input[type="radio"]:checked + .catalog-label-radio::after {
 	left: 8px;
 	opacity: 0.4;
 }
-.catalog-label-radio:hover {
+.catalog-label-radio:hover,
+.catalog-label-checkbox:hover {
 	color: #000;
 }
 .catalog-label-radio:hover::before,
@@ -742,7 +747,9 @@ input[type="radio"]:checked + .catalog-label-radio:hover::after {
 	opacity: 1;
 }
 input[type="radio"]:disabled + .catalog-label-radio,
-input[type="radio"]:disabled + .catalog-label-radio:hover {
+input[type="radio"]:disabled + .catalog-label-radio:hover,
+input[type="checkbox"]:disabled + .catalog-label-checkbox,
+input[type="checkbox"]:disabled + .catalog-label-checkbox:hover {
 	opacity: 0.3;
 }
 input[type="radio"]:disabled + .catalog-label-radio::after,
@@ -752,22 +759,57 @@ input[type="radio"]:disabled + .catalog-label-radio:hover::before {
 	opacity: 0.3;
 	/*0.1*/
 }
-
-/*input[type="radio"]:disabled + .catalog-label-radio::before,
-input[type="radio"]:disabled + .catalog-label-radio:hover::before {
-	border-color: #4d4d4d;
-}*/
-
 .catalog-label-checkbox::before {
 	content: "";
 	position: absolute;
 	display: block;
 	width: 18px;
 	height: 18px;
-	border: 2px solid #b8b8b8;
+	border: 2px solid #4d4d4d;
 	border-radius: 5px;
 	top: -3px;
 	left: 0;
+	opacity: 0.3;
+}
+input[type="checkbox"]:checked + .catalog-label-checkbox::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 26px;
+	top: -5px;
+	left: -2px;
+	background: url(../img/sprite-icons.png) no-repeat #fff;
+	background-position: -239px 2px;
+}
+.catalog-label-checkbox:hover::before,
+.catalog-label-checkbox:hover::after,
+input[type="checkbox"]:checked + .catalog-label-radio:hover::after {
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 26px;
+	top: -5px;
+	left: -2px;
+	background: url(../img/sprite-icons.png) no-repeat;
+	background-position: -193px 2px;
+	opacity: 1;
+	border: none;
+}
+input[type="checkbox"]:disabled + .catalog-label-checkbox::after,
+input[type="checkbox"]:disabled + .catalog-label-checkbox::before,
+input[type="checkbox"]:disabled + .catalog-label-checkbox:hover::after,
+input[type="checkbox"]:disabled + .catalog-label-checkbox:hover::before {
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 26px;
+	top: -5px;
+	left: -2px;
+	background: url(../img/sprite-icons.png) no-repeat #fff;
+	background-position: -240px 2px;
+	opacity: 1;
+	border: none;
 }
 .btn-form {
 	width: 260px;

@@ -51,26 +51,31 @@
 				</div>
 				<div class="grid-types"><span class="catalog-title">Сетка:</span>
 
-					<input id="adaptive" type="radio" name="grid" value="adaptive">
+					<input id="adaptive" type="radio" name="grid" value="adaptive" checked>
 					<label for="adaptive" class="catalog-label-radio">Адаптивная</label>
 
 					<input id="fixed" type="radio" name="grid" value="fixed">
 					<label for="fixed" class="catalog-label-radio">Фиксированная</label>
 
-					<input id="rubber" type="radio" name="grid" value="rubber" checked disabled>
+					<input id="rubber" type="radio" name="grid" value="rubber">
 					<label for="rubber" class="catalog-label-radio">Резиновая</label>
 				</div>
 				<div class="speciality-list"><span class="catalog-title">Особенности:</span>
-					<label class="catalog-label-checkbox">
-						<input type="checkbox" name="speciality" value="spec-1" checked>Слайдер</label>
-					<label class="catalog-label-checkbox">
-						<input type="checkbox" name="speciality" value="spec-2">Блок преимуществ</label>
-					<label class="catalog-label-checkbox">
-						<input type="checkbox" name="speciality" value="spec-3" checked>Новости</label>
-					<label class="catalog-label-checkbox">
-						<input type="checkbox" name="speciality" value="spec-4">Галерея</label>
-					<label class="catalog-label-checkbox">
-						<input type="checkbox" name="speciality" value="spec-5">Корзина</label>
+
+					<input id="spec-1" type="checkbox" name="speciality" value="spec-1" checked>
+					<label for="spec-1" class="catalog-label-checkbox">Слайдер</label>
+
+					<input id="spec-2" type="checkbox" name="speciality" value="spec-2">
+					<label for="spec-2" class="catalog-label-checkbox">Блок преимуществ</label>
+
+					<input id="spec-3" type="checkbox" name="speciality" value="spec-3" checked>
+					<label for="spec-3" class="catalog-label-checkbox">Новости</label>
+
+					<input id="spec-4" type="checkbox" name="speciality" value="spec-4" checked disabled>
+					<label for="spec-4" class="catalog-label-checkbox">Галерея</label>
+
+					<input id="spec-5" type="checkbox" name="speciality" value="spec-5">
+					<label for="spec-5" class="catalog-label-checkbox">Корзина</label>
 				</div>
 				<input type="submit" class="btn-form" value="Показать">
 			</form>
