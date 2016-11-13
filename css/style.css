@@ -617,20 +617,52 @@ h3 {
 	margin-top: 50px;
 	margin-right: 40px;
 }
-.control-line {
-	width: 260px;
-	height: 80px;
+.range-controls {
+	position: relative;
+	width: 220px;
+	height: 41px;
 	background-color: #eee;
 	border-radius: 3px;
+	padding-top: 39px;
+	padding-left: 20px;
+	padding-right: 20px;
 	margin-top: 50px;
 	margin-bottom: 15px;
+}
+.control-scale {
+	height: 2px;
+	background: #d7dcde;
+}
+.control-bar {
+	width: 70%;
+	height: 2px;
+	background: #00ca74;
+}
+.toggle {
+	position: absolute;
+	top: 30px;
+	left: 0px;
+	width: 4px;
+	height: 4px;
+	border: 8px solid #fff;
+	background: #ababab;
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 #cfcfcf;
+	cursor: pointer;
+}
+.ball-left {
+	left: 20px;
+}
+.ball-right {
+	left: 155px;
 }
 .ranges {
 	display: inline-block;
 	vertical-align: middle;
 	width: 260px;
 	height: 28px;
-	margin-bottom: 20px;
+	margin-top: 3px;
+	margin-bottom: 10px;
 }
 .range-left {
 	float: left;
@@ -648,7 +680,7 @@ h3 {
 .till {
 	width: 60px;
 	height: 28px;
-	padding: 0 10px;
+	padding: 4px 10px;
 	text-align: center;
 	background-color: #eee;
 	border-radius: 3px;
@@ -694,8 +726,7 @@ h3 {
 }
 .grid-types,
 .speciality-list {
-	/*	width: 360px;*/
-	margin-top: 45px;
+	margin-top: 50px;
 }
 .grid-types .catalog-title,
 .speciality-list .catalog-title {
