@@ -714,15 +714,25 @@ h3 {
 	display: inline-block;
 	vertical-align: bottom;
 	border: 4px solid transparent;
-	border-top: 9px solid grey;
+	border-top: 9px solid #000;
+	opacity: 0.2;
 	margin-left: 30px;
 }
 .catalog-sort-asc {
 	display: inline-block;
 	vertical-align: bottom;
 	border: 4px solid transparent;
-	border-bottom: 9px solid grey;
+	border-bottom: 9px solid #000;
+	opacity: 0.2;
 	margin-left: 17px;
+}
+.catalog-sort-desc:hover,
+.catalog-sort-asc:hover {
+	opacity: 0.4;
+}
+.catalog-sort-desc:active,
+.catalog-sort-asc:active {
+	opacity: 1;
 }
 .grid-types,
 .speciality-list {
@@ -778,9 +788,7 @@ input[type="radio"]:checked + .catalog-label-radio:hover::after {
 	opacity: 1;
 }
 input[type="radio"]:disabled + .catalog-label-radio,
-input[type="radio"]:disabled + .catalog-label-radio:hover,
-input[type="checkbox"]:disabled + .catalog-label-checkbox,
-input[type="checkbox"]:disabled + .catalog-label-checkbox:hover {
+input[type="radio"]:disabled + .catalog-label-radio:hover {
 	opacity: 0.3;
 }
 input[type="radio"]:disabled + .catalog-label-radio::after,
@@ -813,9 +821,11 @@ input[type="checkbox"]:checked + .catalog-label-checkbox::after {
 	background: url(../img/sprite-icons.png) no-repeat #fff;
 	background-position: -239px 2px;
 }
-.catalog-label-checkbox:hover::before,
+.catalog-label-checkbox:hover::before {
+	opacity: 1;
+}
 .catalog-label-checkbox:hover::after,
-input[type="checkbox"]:checked + .catalog-label-radio:hover::after {
+input[type="checkbox"]:checked + .catalog-label-checkbox:hover::after {
 	display: block;
 	position: absolute;
 	width: 29px;
@@ -827,20 +837,10 @@ input[type="checkbox"]:checked + .catalog-label-radio:hover::after {
 	opacity: 1;
 	border: none;
 }
-input[type="checkbox"]:disabled + .catalog-label-checkbox::after,
-input[type="checkbox"]:disabled + .catalog-label-checkbox::before,
-input[type="checkbox"]:disabled + .catalog-label-checkbox:hover::after,
+input[type="checkbox"]:disabled + .catalog-label-checkbox,
+input[type="checkbox"]:disabled + .catalog-label-checkbox:hover,
 input[type="checkbox"]:disabled + .catalog-label-checkbox:hover::before {
-	display: block;
-	position: absolute;
-	width: 29px;
-	height: 26px;
-	top: -5px;
-	left: -2px;
-	background: url(../img/sprite-icons.png) no-repeat #fff;
-	background-position: -240px 2px;
-	opacity: 1;
-	border: none;
+	opacity: 0.3;
 }
 .btn-form {
 	width: 260px;
@@ -881,7 +881,7 @@ input[type="checkbox"]:disabled + .catalog-label-checkbox:hover::before {
 }
 .catalog-template:hover .browser-dots {
 	background-color: #4d4d4d;
-	border-color: #4d4d4d;
+	border-color: #000;
 }
 .browser-dots {
 	display: block;
