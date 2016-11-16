@@ -167,6 +167,7 @@
 		overflow: hidden;
 		background-repeat: no-repeat;
 		background-position: 100% 0;
+		background-color: #eee;
 		z-index: 10;
 	}
 	.slide:nth-child(n+2) {
@@ -463,6 +464,7 @@
 		opacity: 0.1;
 	}
 	.footer {
+		position: relative;
 		width: 100%;
 		margin: 0 auto;
 		padding: 0;
@@ -472,7 +474,8 @@
 		background: #eee url(../img/map.jpg) no-repeat center center;
 	}
 	.contacts {
-		position: relative;
+		/*		position: relative;*/
+		position: absolute;
 		top: 54px;
 		left: 370px;
 		display: block;
@@ -480,6 +483,7 @@
 		width: 220px;
 		height: 205px;
 		padding: 50px;
+		z-index: 30;
 	}
 	.contacts-email,
 	.catalog-template-btn,
@@ -546,6 +550,7 @@
 		height: 80px;
 		background-color: #e1e1e1;
 		border-radius: 50%;
+		-webkit-transition: 0.3s all linear;
 		transition: 0.3s all linear;
 	}
 	.social-links-item::after,
@@ -1001,6 +1006,14 @@
 	}
 	/*окно отправки письма*/
 	
+	@-webkit-keyframes emerging {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 	@keyframes emerging {
 		0% {
 			opacity: 0;
@@ -1009,9 +1022,10 @@
 			opacity: 1;
 		}
 	}
-	@keyframes shake {
+	@-webkit-keyframes shake {
 		0%,
 		100% {
+			-webkit-transform: translateX(0);
 			transform: translateX(0);
 		}
 		10%,
@@ -1019,12 +1033,36 @@
 		50%,
 		70%,
 		90% {
+			-webkit-transform: translateX(-10px);
 			transform: translateX(-10px);
 		}
 		20%,
 		40%,
 		60%,
 		80% {
+			-webkit-transform: translateX(10px);
+			transform: translateX(10px);
+		}
+	}
+	@keyframes shake {
+		0%,
+		100% {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		}
+		10%,
+		30%,
+		50%,
+		70%,
+		90% {
+			-webkit-transform: translateX(-10px);
+			transform: translateX(-10px);
+		}
+		20%,
+		40%,
+		60%,
+		80% {
+			-webkit-transform: translateX(10px);
 			transform: translateX(10px);
 		}
 	}
@@ -1047,9 +1085,11 @@
 	}
 	.modal-email-show {
 		display: block;
+		-webkit-animation: emerging 1s;
 		animation: emerging 1s;
 	}
 	.modal-error {
+		-webkit-animation: shake 0.5s;
 		animation: shake 0.5s;
 	}
 	.modal-email h2 {
@@ -1068,9 +1108,11 @@
 	}
 	.union {
 		font-size: 0;
+		margin-bottom: 35px;
 	}
 	.write {
 		display: inline-block;
+		vertical-align: middle;
 	}
 	.write {
 		font-weight: bold;
@@ -1102,9 +1144,11 @@
 		background-color: #fb565a;
 	}
 	.modal-email-close::before {
+		-webkit-transform: rotate(45deg);
 		transform: rotate(45deg);
 	}
 	.modal-email-close::after {
+		-webkit-transform: rotate(-45deg);
 		transform: rotate(-45deg);
 	}
 	.modal-email-close:hover,
@@ -1118,12 +1162,16 @@
 	.user-name,
 	.user-email,
 	.mail-text {
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: normal;
+		font-family: "Roboto", "Arial", sans-serif;
 		width: 326px;
 		padding: 15px;
 		border: 2px solid #d7dcde;
 		border-radius: 3px;
 		outline: inherit;
-		margin: 10px 0;
+		margin: 10px 0 0;
 		color: #a1a1a1;
 		box-shadow: none;
 	}
@@ -1132,6 +1180,7 @@
 	}
 	.mail-text {
 		width: 726px;
+		height: 92px;
 	}
 	.user-name:hover,
 	.user-email:hover,
@@ -1149,7 +1198,7 @@
 		border-color: #e74246;
 		color: #e74246;
 	}
-	.email-btn: {
+	.email-btn {
 		width: 260px;
 		margin-bottom: 50px;
 		outline: none;
