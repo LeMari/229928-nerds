@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Дизайн-студия nёrd's</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">-->
 	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
@@ -163,19 +163,32 @@
 		<h2 class="modal-email-title">Напишите нам</h2><span>
 		<button class="modal-email-close" type="button" title="Закрыть"></button></span>
 
-		<form class="email-form" action="http://..." method="post">
-			<label class="write">Ваше имя:
-				<br>
-				<input class="user-name" type="text" name="name" placeholder="Представьтесь, пожалуйста" required>
-			</label>
-			<label class="write">Ваш e-mail:
-				<br>
-				<input class="user-email" type="email" name="email" placeholder="Для отправки ответа" required>
-			</label>
-			<label class="write">Текст письма:
-				<br>
-				<textarea name="text" rows="5" cols="auto" class="mail-text">В свободной форме</textarea>
-			</label>
+		<form class="email-form" action="index.html" method="post">
+			<div class="union">
+
+				<label class="write">Ваше имя:
+					<br>
+
+					<input id="username" class="user-name" type="text" name="username" placeholder="Представьтесь, пожалуйста" required>
+				</label>
+
+
+				<label class="write">Ваш e-mail:
+					<br>
+
+					<input id="email" class="user-email" type="email" name="email" placeholder="Для отправки ответа" required>
+				</label>
+
+
+			</div>
+			<div>
+				<label class="write">Текст письма:
+					<br>
+
+					<textarea id="text" name="text" rows="5" cols="auto" class="mail-text" placeholder="В свободной форме"></textarea>
+				</label>
+
+			</div>
 			<button class="email-btn" type="submit">Отправить</button>
 		</form>
 	</div>
@@ -183,21 +196,20 @@
 		var link = document.querySelector(".contacts-email");
 		var popup = document.querySelector(".modal-email");
 		var close = popup.querySelector(".modal-email-close");
-		var name = popup.querySelector("[name=name]");
+		var username = popup.querySelector("[name=username]");
 		var form = popup.querySelector("form");
 		var email = popup.querySelector(("[name=email]"));
-		var storage = localStorage.getItem("name");
+		var storage = localStorage.getItem("username");
 
 		link.addEventListener("click", function(event) {
 			event.preventDefault();
 			popup.classList.add("modal-email-show");
-
-			/*if (storage) {
-				name.value = storage;
+			if (storage) {
+				username.value = storage;
 				email.focus();
 			} else {
-				name.focus();
-			}*/
+				username.focus();
+			}
 
 		});
 
@@ -205,19 +217,16 @@
 			event.preventDefault();
 			popup.classList.remove("modal-email-show");
 			popup.classList.remove("modal-error");
-
 		});
 
 		form.addEventListener("submit", function(event) {
-			if (!name.value || !email.value) {
+			if (!username.value || !email.value) {
 				event.preventDefault();
 				popup.classList.remove("modal-error");
 				popup.offsetWidth = popup.offsetWidth;
 				popup.classList.add("modal-error");
-
-				console.log("Нужно ввести имя и e-mail");
 			} else {
-				localStorage.setItem("name", name.value);
+				localStorage.setItem("username", username.value);
 			}
 		});
 
@@ -226,7 +235,6 @@
 				if (popup.classList.contains("modal-email-show")) {
 					popup.classList.remove("modal-email-show");
 					popup.classList.remove("modal-error");
-
 				}
 			}
 		});
