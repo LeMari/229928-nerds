@@ -261,7 +261,7 @@
 		margin-top: 80px;
 		margin-right: 100px;
 	}
-	.portfolio-box:nth-child(3) {
+	.portfolio-box:nth-child(3n) {
 		float: right;
 		margin-right: 60px;
 	}
@@ -440,16 +440,21 @@
 	.clients-list-item:nth-child(4n) {
 		margin-right: 0;
 	}
+	.client-logo {
+		position: relative;
+		display: block;
+	}
 	.client-logo::before {
 		content: "";
-		top: 16px;
 		position: absolute;
+		top: 50%;
 		width: 2px;
 		height: 52px;
 		background: #eee;
 		margin-left: -20px;
+		margin-top: -26px;
 	}
-	.clients-list-item:first-child .client-logo::before {
+	.clients-list-item:nth-child(4n+1) .client-logo::before {
 		opacity: 0;
 	}
 	.clients-list img {
@@ -473,12 +478,15 @@
 		height: 416px;
 		background: #eee url(../img/map.jpg) no-repeat center center;
 	}
+	.contacts-container {
+		position: relative;
+	}
 	.contacts {
-		/*		position: relative;*/
 		position: absolute;
-		top: 54px;
-		left: 370px;
+		top: -360px;
+		left: 20px;
 		display: block;
+		margin: 0 auto;
 		background: #fff;
 		width: 220px;
 		height: 205px;
@@ -735,6 +743,7 @@
 	.catalog-sort-asc:hover {
 		opacity: 0.4;
 	}
+	.catalog-sort-desc.active,
 	.catalog-sort-desc:active,
 	.catalog-sort-asc:active {
 		opacity: 1;
