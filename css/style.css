@@ -8,7 +8,7 @@
 		font-family: "Roboto Medium";
 		src: url("../fonts/robotomedium.woff") format("woff"), url("../fonts/robotomedium.woff2") format("woff2");
 		font-weight: normal;
-		font-style: medium;
+		font-style: normal;
 	}
 	.clearfix::after {
 		content: "";
@@ -489,7 +489,6 @@
 		margin: 0 auto;
 		background: #fff;
 		width: 220px;
-		height: 205px;
 		padding: 50px;
 		z-index: 30;
 	}
@@ -528,7 +527,9 @@
 		color: #666;
 	}
 	.phone {
+		display: block;
 		text-decoration: none;
+		margin-top: 15px;
 	}
 	.footer-bottom {
 		width: 1160px;
@@ -559,7 +560,6 @@
 		height: 80px;
 		background-color: #e1e1e1;
 		border-radius: 50%;
-		-webkit-transition: 0.3s all linear;
 		transition: 0.3s all linear;
 	}
 	.social-links-item::after,
@@ -1020,14 +1020,6 @@
 	}
 	/*окно отправки письма*/
 	
-	@-webkit-keyframes emerging {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
 	@keyframes emerging {
 		0% {
 			opacity: 0;
@@ -1036,32 +1028,9 @@
 			opacity: 1;
 		}
 	}
-	@-webkit-keyframes shake {
-		0%,
-		100% {
-			-webkit-transform: translateX(0);
-			transform: translateX(0);
-		}
-		10%,
-		30%,
-		50%,
-		70%,
-		90% {
-			-webkit-transform: translateX(-10px);
-			transform: translateX(-10px);
-		}
-		20%,
-		40%,
-		60%,
-		80% {
-			-webkit-transform: translateX(10px);
-			transform: translateX(10px);
-		}
-	}
 	@keyframes shake {
 		0%,
 		100% {
-			-webkit-transform: translateX(0);
 			transform: translateX(0);
 		}
 		10%,
@@ -1069,14 +1038,12 @@
 		50%,
 		70%,
 		90% {
-			-webkit-transform: translateX(-10px);
 			transform: translateX(-10px);
 		}
 		20%,
 		40%,
 		60%,
 		80% {
-			-webkit-transform: translateX(10px);
 			transform: translateX(10px);
 		}
 	}
@@ -1099,11 +1066,9 @@
 	}
 	.modal-email-show {
 		display: block;
-		-webkit-animation: emerging 1s;
 		animation: emerging 1s;
 	}
 	.modal-error {
-		-webkit-animation: shake 0.5s;
 		animation: shake 0.5s;
 	}
 	.modal-email h2 {
@@ -1158,11 +1123,9 @@
 		background-color: #fb565a;
 	}
 	.modal-email-close::before {
-		-webkit-transform: rotate(45deg);
 		transform: rotate(45deg);
 	}
 	.modal-email-close::after {
-		-webkit-transform: rotate(-45deg);
 		transform: rotate(-45deg);
 	}
 	.modal-email-close:hover,
@@ -1176,6 +1139,7 @@
 	.user-name,
 	.user-email,
 	.mail-text {
+		display: block;
 		font-size: 16px;
 		line-height: 18px;
 		font-weight: normal;
